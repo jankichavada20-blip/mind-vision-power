@@ -1,0 +1,15 @@
+<section class="referral-box">
+  <h2>Your Referral Link</h2>
+  <input type="text" value="https://yourwebsite.com/?ref=USERNAME" id="refLink" readonly>
+  <button onclick="copyRef()">Copy Link</button>
+</section>
+
+<script>
+function copyRef() {
+  let copyText = document.getElementById("refLink");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("Referral link copied!");
+}
+</script>
